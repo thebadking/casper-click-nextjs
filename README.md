@@ -40,15 +40,6 @@ For detailed information about integrating CSPR.Click with your Next.js app, vis
 
 Thanks to [@Charlie85270](https://github.com/Charlie85270) for this contribution!
 
-## How to Use as a Template
-
-1. Click the "Use this template" button on the repository page.
-2. Create a new repository from the template.
-3. Clone your new repository:
-   ```bash
-   git clone https://github.com/your-username/your-new-repo.git
-   cd your-new-repo
-   ```
 
 ## Deployment
 
