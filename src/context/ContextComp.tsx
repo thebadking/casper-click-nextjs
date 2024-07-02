@@ -1,33 +1,69 @@
 "use client";
-
+import React, { useState, useEffect } from "react";
 import { ReactNode } from "react";
-import { useGetAllValidators } from "@/hooks/useGetAllValidators";
-import { useGetStatusInfos } from "@/hooks/useGetStatusInfos";
-import { getAvatarUrl } from "@/utils/Utils";
-import AppContext from "@/context/AppContext";
+import AppContext, { AppState } from "@/context/AppContext";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ApolloProvider } from "@apollo/client";
+import client from "@/utils/apolloClient";
+import { ThemeProvider, useTheme } from "next-themes";
 
 const ContextComp = ({ children }: { children: ReactNode }) => {
-  const statusInfos = useGetStatusInfos();
-  const era = statusInfos.data?.result.last_added_block_info.era_id || 0;
-  const validatorsQuery = useGetAllValidators(era);
+  const [theme, setBarTheme] = useState<AppState["theme"]>("dark");
+  const [csprTheme, setCsprTheme] = useState<AppState["csprTheme"]>(null);
+
+  const { setTheme } = useTheme();
+
+  const queryClient = new QueryClient({
+    defaultOptions: { queries: { refetchOnWindowFocus: false } },
+  });
+
+  useEffect(() => {
+    import("@make-software/csprclick-ui").then((mod) => {
+      const themeC =
+        theme === "light"
+          ? mod.CsprClickThemes.light
+          : mod.CsprClickThemes.dark;
+      setCsprTheme({
+        ...themeC,
+        typography: {
+          ...mod.CsprClickThemes.typography,
+          fontWeight: {
+            bold: 700,
+            extraBold: 800,
+            light: 300,
+            medium: 500,
+            regular: 400,
+            semiBold: 600,
+          },
+          fontFamily: {
+            primary:
+              'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important',
+            mono: 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important',
+          },
+        },
+        styleguideColors: {
+          ...themeC.styleguideColors,
+          backgroundTertiary: theme === "light" ? "white" : "#1f2937",
+          contentTertiary: theme === "light" ? "gray" : "gray",
+          contentOnFill: theme === "light" ? "gray" : "gray",
+        },
+      });
+    });
+    setTheme(theme);
+  }, [theme]);
 
   return (
-    <AppContext.Provider
-      value={{
-        validators:
-          validatorsQuery?.data?.data?.map((item) => ({
-            publicKey: item.public_key,
-            fee: item.fee,
-            name: item.account_info?.info.owner?.name,
-            img:
-              item.account_info?.info.owner?.branding?.logo?.png_256 ||
-              item.account_info?.info.owner?.branding?.logo?.png_1024 ||
-              getAvatarUrl(item.public_key),
-          })) || [],
-      }}
-    >
-      {children}
-    </AppContext.Provider>
+    <ThemeProvider attribute="class">
+      <ApolloProvider client={client}>
+        <QueryClientProvider client={queryClient}>
+          <AppContext.Provider
+            value={{ theme, csprTheme, setBarTheme, setCsprTheme }}
+          >
+            {children}
+          </AppContext.Provider>
+        </QueryClientProvider>
+      </ApolloProvider>
+    </ThemeProvider>
   );
 };
 
