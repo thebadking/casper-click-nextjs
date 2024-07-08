@@ -2,7 +2,7 @@ import { useQuery } from "react-query";
 import { getContracts } from "../services/httpReq";
 import { ContractsPayload } from "../types/contracts";
 
-export const useGetContracts = page =>
+export const useGetContracts = (page: number) =>
   useQuery<ContractsPayload, Error>(
     `contracts-${page}`,
     () => getContracts(page),

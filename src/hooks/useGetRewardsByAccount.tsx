@@ -2,7 +2,10 @@ import { useQuery } from "react-query";
 import { getRewardsByAccount } from "../services/httpReq";
 import { RewardsPayload } from "../types/account";
 
-export const useGetRewardsByAccount = (publicKey, page) =>
+export const useGetRewardsByAccount = (
+  publicKey: string,
+  page: number | undefined
+) =>
   useQuery<RewardsPayload, Error>(
     `rewards-account-${publicKey}`,
     () => getRewardsByAccount(publicKey, page),

@@ -5,7 +5,10 @@ import {
 } from "../services/httpReq";
 import { ItemFromHashAccountPayload } from "../types/account";
 
-export const useGetItemFromHashAccount = (state_root_hash, account_hash) =>
+export const useGetItemFromHashAccount = (
+  state_root_hash: string,
+  account_hash: string
+) =>
   useQuery<ItemFromHashAccountPayload, Error>(
     `itemHash-${account_hash}`,
     () => getItemFromHashAccount(state_root_hash, account_hash),

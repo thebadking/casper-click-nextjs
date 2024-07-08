@@ -2,7 +2,7 @@ import { useQuery } from "react-query";
 import { getRichList } from "../services/httpReq";
 import { RichList } from "../types/richlist";
 
-export const useGetRichList = page =>
+export const useGetRichList = (page: any) =>
   useQuery<RichList[], Error>(
     `richlist-${page || 1}`,
     () => getRichList(page || 1),

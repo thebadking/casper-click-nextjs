@@ -2,7 +2,7 @@ import { useQuery } from "react-query";
 import { getTotalRewardsByAccount } from "../services/httpReq";
 import { TotalRewardAccountPayload } from "../types/account";
 
-export const useGetTotalRewardsByAccount = id =>
+export const useGetTotalRewardsByAccount = (id: string) =>
   useQuery<TotalRewardAccountPayload, Error>(
     `rewards-by-account-${id}`,
     () => getTotalRewardsByAccount(id),

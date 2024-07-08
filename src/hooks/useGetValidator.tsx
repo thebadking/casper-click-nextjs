@@ -2,7 +2,7 @@ import { useQuery } from "react-query";
 import { getValidator } from "../services/httpReq";
 import { ValidatorPayload } from "../types/validator";
 
-export const useGetValidator = id =>
+export const useGetValidator = (id: string) =>
   useQuery<ValidatorPayload, Error>(`validator-${id}`, () => getValidator(id), {
     refetchOnWindowFocus: false,
     enabled: Boolean(id),

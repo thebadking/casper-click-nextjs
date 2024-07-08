@@ -2,7 +2,7 @@ import { useQuery } from "react-query";
 import { getTokenUndelegateByAccount } from "../services/httpReq";
 import { TotalRewardAccountPayload } from "../types/account";
 
-export const useGetUndelegatingTokensByAccount = (id, eraid) =>
+export const useGetUndelegatingTokensByAccount = (id: string, eraid: number) =>
   useQuery<TotalRewardAccountPayload, Error>(
     `undelegating-${id}`,
     () => getTokenUndelegateByAccount(id, eraid),

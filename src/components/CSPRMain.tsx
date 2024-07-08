@@ -23,6 +23,7 @@ const MainContainer = () => {
     clickRef?.on("csprclick:disconnected", async () => {
       setActiveAccount(null);
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [clickRef?.on]);
 
   return (

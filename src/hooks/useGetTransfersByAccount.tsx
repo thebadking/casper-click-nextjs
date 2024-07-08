@@ -2,7 +2,10 @@ import { useQuery } from "react-query";
 import { getTransfersByAccount } from "../services/httpReq";
 import { TransfersPayload } from "../types/transfers";
 
-export const useGetTransfersByAccount = (publicKey, page) =>
+export const useGetTransfersByAccount = (
+  publicKey: string,
+  page: number | undefined
+) =>
   useQuery<TransfersPayload, Error>(
     `transfers-${publicKey}`,
     () => getTransfersByAccount(publicKey, page),

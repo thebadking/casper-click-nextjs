@@ -2,7 +2,10 @@ import { useQuery } from "react-query";
 import { getFriendlyMarketNFTByAccount } from "../services/httpReq";
 import { FriendlyNFTByAccount } from "../types/nft";
 
-export const useGetFriendlyMarketNFTByAccount = (accountHash, page) =>
+export const useGetFriendlyMarketNFTByAccount = (
+  accountHash: any,
+  page: number
+) =>
   useQuery<FriendlyNFTByAccount, Error>(
     `NFT-friendly-${accountHash}`,
     () => getFriendlyMarketNFTByAccount(accountHash, page),

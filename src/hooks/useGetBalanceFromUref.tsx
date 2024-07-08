@@ -2,7 +2,7 @@ import { useQuery } from "react-query";
 import { getBalanceFromUref } from "../services/httpReq";
 import { BalancePayload } from "../types/account";
 
-export const useGetBalanceFromUref = (state_root_hash, uref) =>
+export const useGetBalanceFromUref = (state_root_hash: string, uref: string) =>
   useQuery<BalancePayload, Error>(
     `balance-${uref}`,
     () => getBalanceFromUref(state_root_hash, uref),

@@ -2,7 +2,10 @@ import { useQuery } from "react-query";
 import { getDeploysByAccount } from "../services/httpReq";
 import { DeploysPayload } from "../types/deploys";
 
-export const useGetDeploysByAccount = (publicKey, page) =>
+export const useGetDeploysByAccount = (
+  publicKey: string,
+  page: number | undefined
+) =>
   useQuery<DeploysPayload, Error>(
     `deploys-${publicKey}`,
     () => getDeploysByAccount(publicKey, page),

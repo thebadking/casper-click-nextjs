@@ -3,7 +3,7 @@ import { getContractPackage } from "../services/httpReq";
 
 import { ContractPackagePayload } from "../types/contracts";
 
-export const useGetContractPackage = id =>
+export const useGetContractPackage = (id: string) =>
   useQuery<ContractPackagePayload, Error>(
     `contract-package-${id}`,
     () => getContractPackage(id),

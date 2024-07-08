@@ -2,7 +2,7 @@ import { useQuery } from "react-query";
 import { getDeploys } from "../services/httpReq";
 import { DeploysPayload } from "../types/deploys";
 
-export const useGetDeploys = (page, contractPackage?: string) =>
+export const useGetDeploys = (page: number, contractPackage?: string) =>
   useQuery<DeploysPayload, Error>(
     `deploys-${contractPackage}-${page}`,
     () => getDeploys(page, undefined, contractPackage),

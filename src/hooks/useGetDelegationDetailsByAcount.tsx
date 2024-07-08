@@ -2,7 +2,7 @@ import { useQuery } from "react-query";
 import { getDelegationDetailsByAccount } from "../services/httpReq";
 import { DelegationsDetailsPayload } from "../types/account";
 
-export const useGetDelegationDetailsByAcount = id =>
+export const useGetDelegationDetailsByAcount = (id: string) =>
   useQuery<DelegationsDetailsPayload, Error>(
     `delegation-${id}`,
     () => getDelegationDetailsByAccount(id),

@@ -2,7 +2,7 @@ import { useQuery } from "react-query";
 import { getBlockDetails } from "../services/httpReq";
 import { BlockPayload } from "../types/block";
 
-export const useGetBlockById = id =>
+export const useGetBlockById = (id: string) =>
   useQuery<BlockPayload, Error>(`block-${id}`, () => getBlockDetails(id), {
     refetchOnWindowFocus: false,
     enabled: Boolean(id),

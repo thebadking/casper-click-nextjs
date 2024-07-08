@@ -142,7 +142,11 @@ export const truncateString = (string: string, number: number) => {
   return string?.slice(0, number).concat("...");
 };
 
-export const isToday = someDate => {
+export const isToday = (someDate: {
+  getDate: () => number;
+  getMonth: () => number;
+  getFullYear: () => number;
+}) => {
   const today = new Date();
   return (
     someDate.getDate() == today.getDate() &&
@@ -303,7 +307,8 @@ export const getAvatarUrl = (
   }[]
 ) => {
   const isKnow = KNOW_ADDRESSES.find(
-    add => add.public_key.toLocaleLowerCase() === publicKey?.toLocaleLowerCase()
+    (add) =>
+      add.public_key.toLocaleLowerCase() === publicKey?.toLocaleLowerCase()
   );
   let img = `https://api.dicebear.com/6.x/bottts-neutral/svg?seed=${
     publicKey ? publicKey.slice(12) : "abby"
@@ -314,7 +319,7 @@ export const getAvatarUrl = (
   }
   if (delegatorsInfos) {
     const isDelegatorKnow = delegatorsInfos.find(
-      del => del.publicKey === publicKey
+      (del) => del.publicKey === publicKey
     );
     if (isDelegatorKnow) {
       img = isDelegatorKnow.img || "";
@@ -332,7 +337,8 @@ export const getPublicKeyName = (
   }[]
 ) => {
   const isKnow = KNOW_ADDRESSES.find(
-    add => add.public_key.toLocaleLowerCase() === publicKey?.toLocaleLowerCase()
+    (add) =>
+      add.public_key.toLocaleLowerCase() === publicKey?.toLocaleLowerCase()
   );
   let name = publicKey;
 
@@ -341,7 +347,7 @@ export const getPublicKeyName = (
   }
   if (delegatorsInfos) {
     const isDelegatorKnow = delegatorsInfos.find(
-      del => del.publicKey === publicKey
+      (del) => del.publicKey === publicKey
     );
     if (isDelegatorKnow) {
       name = isDelegatorKnow.name || publicKey;

@@ -2,7 +2,7 @@ import { useQuery } from "react-query";
 import { getBalanceFromUref, getDeployDetails } from "../services/httpReq";
 import { DeployPayload } from "../types/deploy";
 
-export const useGetDeployById = id =>
+export const useGetDeployById = (id: string) =>
   useQuery<DeployPayload, Error>(`deploy-${id}`, () => getDeployDetails(id), {
     refetchOnWindowFocus: false,
     enabled: Boolean(id),

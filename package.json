@@ -17,8 +17,10 @@
     "casper-js-sdk": "^2.15.5",
     "classnames": "^2.5.1",
     "date-fns": "^2.29.3",
+    "js-cookie": "^3.0.5",
     "next": "14.2.4",
     "next-themes": "^0.3.0",
+    "node-fetch": "^3.3.2",
     "prismjs": "^1.29.0",
     "query-string": "^9.0.0",
     "react": "^18",
@@ -27,6 +29,7 @@
     "styled-components": "^5.3.9"
   },
   "devDependencies": {
+    "@types/js-cookie": "^3.0.6",
     "@types/node": "^20",
     "@types/prismjs": "^1.26.4",
     "@types/react": "^18",

@@ -5,7 +5,10 @@ import {
 } from "../services/httpReq";
 import { NFTByAccountPayload } from "../types/account";
 
-export const useGetNFTByAccount = (accountHash, page) =>
+export const useGetNFTByAccount = (
+  accountHash: string,
+  page: number | undefined
+) =>
   useQuery<NFTByAccountPayload, Error>(
     `NFT-${accountHash}`,
     () => getCasperLiveNFTByAccount(accountHash, page),

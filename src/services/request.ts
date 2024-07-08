@@ -1,4 +1,5 @@
-const checkStatus = response => {
+// @ts-nocheck
+const checkStatus = (response: { status: number }) => {
   if (
     (response.status >= 200 && response.status < 300) ||
     response.status === 600
@@ -9,7 +10,11 @@ const checkStatus = response => {
   }
 };
 
-const parseJSON = async function (response) {
+const parseJSON = async function (response: {
+  headers: { get: (arg0: string) => string };
+  json: () => any;
+  text: () => any;
+}) {
   const contentType = response?.headers.get("content-type") || "";
   try {
     if (contentType.includes("application/json")) {
@@ -29,7 +34,9 @@ const parseJSON = async function (response) {
   }
 };
 
-const parseHeaders = async function (response) {
+const parseHeaders = async function (response: {
+  headers: { get: (arg0: string) => string };
+}) {
   const contentRange = response?.headers.get("content-range") || "";
   try {
     if (contentRange) {
@@ -58,16 +65,19 @@ const checkResponse = ({ data, response }) => {
   }
 };
 
-const getReponseHeaders = data => {
+const getReponseHeaders = (data: any) => {
   return data;
 };
 
-export const fetchResponseHeaders = (url, opts = {}) => {
+export const fetchResponseHeaders = (
+  url: string | URL | Request,
+  opts = {}
+) => {
   return fetch(url, opts)
     .then(checkStatus)
     .then(parseHeaders)
     .then(getReponseHeaders)
-    .catch(error => {
+    .catch((error) => {
       if (error.name === "TypeError") {
         console.log(error);
       }
@@ -75,12 +85,12 @@ export const fetchResponseHeaders = (url, opts = {}) => {
     });
 };
 
-const fetchData = (url, opts = {}) => {
+const fetchData = (url: string | URL | Request, opts = {}) => {
   return fetch(url, opts)
     .then(checkStatus)
     .then(parseJSON)
     .then(checkResponse)
-    .catch(error => {
+    .catch((error) => {
       if (error.name === "TypeError") {
         console.log(error);
       }

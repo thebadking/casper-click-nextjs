@@ -1,7 +1,7 @@
 import { useQuery } from "react-query";
 import { getDeployRaw } from "../services/httpReq";
 
-export const useGetDeployRaw = id =>
+export const useGetDeployRaw = (id: string) =>
   useQuery<any, Error>(`deploy-raw-${id}`, () => getDeployRaw(id), {
     refetchOnWindowFocus: false,
     enabled: Boolean(id),
