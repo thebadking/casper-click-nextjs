@@ -2,6 +2,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import ContextComp from "@/context/ContextComp";
 import ClientProvider from "@/context/ClientProvider";
+import { ThemeToggle } from "@/context/theme-toggle";
+import { ThemeProvider } from "@/context/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,13 +15,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div id={"root"}>
+        <div id={"root"} />
+        <ThemeProvider>
           <ContextComp>
-            <div className="p-4 bg-white text-black dark:bg-gray-900 dark:text-white">
-              <ClientProvider>{children}</ClientProvider>
-            </div>
+            <ClientProvider>{children}</ClientProvider>
           </ContextComp>
-        </div>
+        </ThemeProvider>
       </body>
     </html>
   );

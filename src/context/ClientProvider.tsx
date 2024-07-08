@@ -68,7 +68,7 @@ export default function ClientProvider({
   const [network, setNetwork] = useState<string>(NETWORKS[1]);
 
   const { csprTheme, setCsprTheme } = useAppContext();
-  const { theme, setTheme } = useTheme();
+  const { setTheme } = useTheme();
 
   const handleThemeSwitch = () => {
     const newTheme = csprTheme === "dark" ? "light" : "dark";
