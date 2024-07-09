@@ -1,10 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import ContextComp from "@/context/ContextComp";
-import ClientProvider from "@/context/ClientProvider";
-import { ThemeToggle } from "@/context/theme-toggle";
+import CasperProvider from "@/context/CasperProvider";
 import { ThemeProvider } from "@/context/theme-provider";
-
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
@@ -16,11 +14,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div id={"root"} />
-        <ThemeProvider>
-          <ContextComp>
-            <ClientProvider>{children}</ClientProvider>
-          </ContextComp>
-        </ThemeProvider>
+        <ContextComp>
+          <ThemeProvider>
+            <CasperProvider>{children}</CasperProvider>
+          </ThemeProvider>
+        </ContextComp>
       </body>
     </html>
   );
