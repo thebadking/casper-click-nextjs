@@ -1,4 +1,4 @@
-# Casper.Click Integration with Next.js App Router
+# Cspr.Click Integration with Next.js App Router
 
 This project demonstrates how to integrate [CSPR.Click](https://cspr.click/) with the Next.js app router.
 
