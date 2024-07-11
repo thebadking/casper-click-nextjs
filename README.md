@@ -46,5 +46,3 @@ Thanks to [@Charlie85270](https://github.com/Charlie85270) for this contribution
 Deploy your Next.js project using platforms like Vercel, Netlify, or any other hosting provider. Follow their specific instructions for deployment.
 
 ---
-
-**Repo**: [https://github.com/thebadking/casper-click-nextjs](https://github.com/thebadking/casper-click-nextjs)
