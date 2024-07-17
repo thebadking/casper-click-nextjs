@@ -1,9 +1,6 @@
-import { useQuery } from "react-query";
-import {
-  getBlocksByValidator,
-  getRewardsByDelegator,
-} from "../services/httpReq";
-import { BlocksValidatorPayload } from "../types/validator";
+import { useQuery } from 'react-query';
+import { getBlocksByValidator, getRewardsByDelegator } from '../services/httpReq';
+import { BlocksValidatorPayload } from '../types/validator';
 
 export const useGetBlockssByValidator = (publicKey: string, page?: number) =>
   useQuery<BlocksValidatorPayload, Error>(
@@ -13,6 +10,6 @@ export const useGetBlockssByValidator = (publicKey: string, page?: number) =>
       refetchOnWindowFocus: false,
       enabled: Boolean(publicKey),
       // cached request will stay "fresh" for 10 seconds
-      staleTime: 10000,
+      staleTime: 10000
     }
   );

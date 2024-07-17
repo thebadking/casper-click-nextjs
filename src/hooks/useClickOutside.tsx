@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 const useClickOutside = (
   ref: { current: { contains: (arg0: any) => any } },
@@ -10,9 +10,9 @@ const useClickOutside = (
     }
   };
   useEffect(() => {
-    document.addEventListener("click", handleClick);
+    document.addEventListener('click', handleClick);
     return () => {
-      document.removeEventListener("click", handleClick);
+      document.removeEventListener('click', handleClick);
     };
   });
 };

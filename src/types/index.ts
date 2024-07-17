@@ -1,9 +1,9 @@
-import { Headers } from "node-fetch";
-import { StringifiableRecord } from "query-string";
+import { Headers } from 'node-fetch';
+import { StringifiableRecord } from 'query-string';
 
 export interface QueryConfig {
   query?: StringifiableRecord;
-  method?: "GET" | "HEAD";
+  method?: 'GET' | 'HEAD';
   url: string;
   body?: Object;
   headers?: Headers;
@@ -99,57 +99,57 @@ export interface Attribute {
 }
 
 export enum BurnMode {
-  Burnable = "Burnable",
-  NonBurnable = "NonBurnable",
+  Burnable = 'Burnable',
+  NonBurnable = 'NonBurnable'
 }
 
 export enum Chain {
-  Casper = "casper",
-  CasperTest = "casper-test",
+  Casper = 'casper',
+  CasperTest = 'casper-test'
 }
 
 export enum HolderMode {
-  Empty = "",
-  Mixed = "Mixed",
+  Empty = '',
+  Mixed = 'Mixed'
 }
 
 export enum IdentifierMode {
-  Ordinal = "Ordinal",
+  Ordinal = 'Ordinal'
 }
 
 export enum Kind {
-  Digital = "Digital",
-  Empty = "",
+  Digital = 'Digital',
+  Empty = ''
 }
 
 export enum MetadataKind {
-  Empty = "",
-  Raw = "Raw",
+  Empty = '',
+  Raw = 'Raw'
 }
 
 export enum MetadataMutability {
-  Immutable = "Immutable",
-  Mutable = "Mutable",
+  Immutable = 'Immutable',
+  Mutable = 'Mutable'
 }
 
 export enum MintingMode {
-  Installer = "Installer",
-  Public = "Public",
+  Installer = 'Installer',
+  Public = 'Public'
 }
 
 export enum OwnershipMode {
-  Empty = "",
-  Transferable = "Transferable",
+  Empty = '',
+  Transferable = 'Transferable'
 }
 
 export enum Standard {
-  Cep47 = "CEP47",
-  Cep78 = "CEP78",
+  Cep47 = 'CEP47',
+  Cep78 = 'CEP78'
 }
 
 export enum WhitelistMode {
-  Empty = "",
-  Unlocked = "Unlocked",
+  Empty = '',
+  Unlocked = 'Unlocked'
 }
 
 export interface StatusInfoPayload {

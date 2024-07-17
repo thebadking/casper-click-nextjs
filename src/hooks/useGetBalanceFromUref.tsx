@@ -1,6 +1,6 @@
-import { useQuery } from "react-query";
-import { getBalanceFromUref } from "../services/httpReq";
-import { BalancePayload } from "../types/account";
+import { useQuery } from 'react-query';
+import { getBalanceFromUref } from '../services/httpReq';
+import { BalancePayload } from '../types/account';
 
 export const useGetBalanceFromUref = (state_root_hash: string, uref: string) =>
   useQuery<BalancePayload, Error>(
@@ -10,7 +10,7 @@ export const useGetBalanceFromUref = (state_root_hash: string, uref: string) =>
       refetchOnWindowFocus: false,
       enabled: Boolean(state_root_hash) && Boolean(uref),
       // cached request will stay "fresh" for 10 seconds
-      staleTime: 10000,
+      staleTime: 10000
     }
   );
 

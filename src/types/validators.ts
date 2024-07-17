@@ -44,9 +44,9 @@ export interface Node {
 }
 
 export enum Functionality {
-  Other = "other",
-  RPCProxy = "rpc-proxy",
-  Validator = "validator",
+  Other = 'other',
+  RPCProxy = 'rpc-proxy',
+  Validator = 'validator'
 }
 
 export interface Location {
@@ -116,24 +116,24 @@ export interface Social {
 }
 
 export enum Reddit {
-  Empty = "",
-  Everstake = "Everstake",
-  Mystra = "mystra",
-  RAllianceblock = "r/Allianceblock/",
-  RHectordao = "/r/hectordao/",
-  The3KyNoX = "3KyNoX",
-  UNeoNumis = "u/NeoNumis",
+  Empty = '',
+  Everstake = 'Everstake',
+  Mystra = 'mystra',
+  RAllianceblock = 'r/Allianceblock/',
+  RHectordao = '/r/hectordao/',
+  The3KyNoX = '3KyNoX',
+  UNeoNumis = 'u/NeoNumis'
 }
 
 export enum Type {
-  Corporation = "corporation",
-  DAO = "dao",
-  Dapp = "dapp",
-  Exchange = "exchange",
-  Individual = "individual",
-  TypeDAO = "DAO",
-  TypeValidator = "Validator",
-  Validator = "validator",
+  Corporation = 'corporation',
+  DAO = 'dao',
+  Dapp = 'dapp',
+  Exchange = 'exchange',
+  Individual = 'individual',
+  TypeDAO = 'DAO',
+  TypeValidator = 'Validator',
+  Validator = 'validator'
 }
 
 export interface AveragePerformance {

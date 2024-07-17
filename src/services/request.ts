@@ -1,12 +1,9 @@
 // @ts-nocheck
 const checkStatus = (response: { status: number }) => {
-  if (
-    (response.status >= 200 && response.status < 300) ||
-    response.status === 600
-  ) {
+  if ((response.status >= 200 && response.status < 300) || response.status === 600) {
     return response;
   } else {
-    console.log("error");
+    console.log('error');
   }
 };
 
@@ -15,17 +12,17 @@ const parseJSON = async function (response: {
   json: () => any;
   text: () => any;
 }) {
-  const contentType = response?.headers.get("content-type") || "";
+  const contentType = response?.headers.get('content-type') || '';
   try {
-    if (contentType.includes("application/json")) {
+    if (contentType.includes('application/json')) {
       return { data: await response.json(), response };
-    } else if (contentType.includes("text/html")) {
+    } else if (contentType.includes('text/html')) {
       return { data: await response.text(), response };
     } else {
       return { data: response, response };
     }
   } catch (error) {
-    if ((error as any).name === "AbortError") {
+    if ((error as any).name === 'AbortError') {
       return { data: response, response };
     }
 
@@ -34,16 +31,14 @@ const parseJSON = async function (response: {
   }
 };
 
-const parseHeaders = async function (response: {
-  headers: { get: (arg0: string) => string };
-}) {
-  const contentRange = response?.headers.get("content-range") || "";
+const parseHeaders = async function (response: { headers: { get: (arg0: string) => string } }) {
+  const contentRange = response?.headers.get('content-range') || '';
   try {
     if (contentRange) {
       return { contentRange };
     }
   } catch (error) {
-    if ((error as any).name === "AbortError") {
+    if ((error as any).name === 'AbortError') {
       return { data: response, response };
     }
 
@@ -69,16 +64,13 @@ const getReponseHeaders = (data: any) => {
   return data;
 };
 
-export const fetchResponseHeaders = (
-  url: string | URL | Request,
-  opts = {}
-) => {
+export const fetchResponseHeaders = (url: string | URL | Request, opts = {}) => {
   return fetch(url, opts)
     .then(checkStatus)
     .then(parseHeaders)
     .then(getReponseHeaders)
     .catch((error) => {
-      if (error.name === "TypeError") {
+      if (error.name === 'TypeError') {
         console.log(error);
       }
       throw error;
@@ -91,7 +83,7 @@ const fetchData = (url: string | URL | Request, opts = {}) => {
     .then(parseJSON)
     .then(checkResponse)
     .catch((error) => {
-      if (error.name === "TypeError") {
+      if (error.name === 'TypeError') {
         console.log(error);
       }
       throw error;

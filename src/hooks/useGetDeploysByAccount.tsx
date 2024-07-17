@@ -1,11 +1,8 @@
-import { useQuery } from "react-query";
-import { getDeploysByAccount } from "../services/httpReq";
-import { DeploysPayload } from "../types/deploys";
+import { useQuery } from 'react-query';
+import { getDeploysByAccount } from '../services/httpReq';
+import { DeploysPayload } from '../types/deploys';
 
-export const useGetDeploysByAccount = (
-  publicKey: string,
-  page: number | undefined
-) =>
+export const useGetDeploysByAccount = (publicKey: string, page: number | undefined) =>
   useQuery<DeploysPayload, Error>(
     `deploys-${publicKey}`,
     () => getDeploysByAccount(publicKey, page),
@@ -13,6 +10,6 @@ export const useGetDeploysByAccount = (
       refetchOnWindowFocus: false,
       enabled: Boolean(publicKey),
       // cached request will stay "fresh" for 10 seconds
-      staleTime: 10000,
+      staleTime: 10000
     }
   );

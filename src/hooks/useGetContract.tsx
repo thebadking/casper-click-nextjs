@@ -1,16 +1,12 @@
-import { useQuery } from "react-query";
-import { getContract, getContractPackage } from "../services/httpReq";
+import { useQuery } from 'react-query';
+import { getContract, getContractPackage } from '../services/httpReq';
 
-import { ContractPackagePayload } from "../types/contracts";
+import { ContractPackagePayload } from '../types/contracts';
 
 export const useGetContract = (id: string) =>
-  useQuery<ContractPackagePayload, Error>(
-    `contract-${id}`,
-    () => getContract(id),
-    {
-      refetchOnWindowFocus: false,
-      enabled: Boolean(id),
-      // cached request will stay "fresh" for 10 seconds
-      staleTime: 10000,
-    }
-  );
+  useQuery<ContractPackagePayload, Error>(`contract-${id}`, () => getContract(id), {
+    refetchOnWindowFocus: false,
+    enabled: Boolean(id),
+    // cached request will stay "fresh" for 10 seconds
+    staleTime: 10000
+  });

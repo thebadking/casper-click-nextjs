@@ -1,26 +1,35 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
-import { useClickRef } from "@make-software/csprclick-ui";
-import { LandingBrief, SignedInBrief } from "@/components/GettingStarted";
-import { Welcome } from "@/components/GettingStarted/components";
-import Container from "@/components/container";
+import { useEffect, useState } from 'react';
+import { useClickRef } from '@make-software/csprclick-ui';
+import { LandingBrief, SignedInBrief } from '@/components/GettingStarted';
+import { Welcome } from '@/components/GettingStarted/components';
+import styled from 'styled-components';
+import Container from '@/components/container';
+
+const GettingStartedContainer = styled.div(({ theme }) =>
+  theme.withMedia({
+    maxWidth: ['100%', '720px', '960px'],
+    padding: '0 12px',
+    margin: '0 auto'
+  })
+);
 
 const MainContainer = () => {
   const clickRef = useClickRef();
   const [activeAccount, setActiveAccount] = useState(null);
 
   useEffect(() => {
-    clickRef?.on("csprclick:signed_in", async (evt) => {
+    clickRef?.on('csprclick:signed_in', async (evt) => {
       await setActiveAccount(evt.account);
     });
-    clickRef?.on("csprclick:switched_account", async (evt) => {
+    clickRef?.on('csprclick:switched_account', async (evt) => {
       await setActiveAccount(evt.account);
     });
-    clickRef?.on("csprclick:signed_out", async () => {
+    clickRef?.on('csprclick:signed_out', async () => {
       setActiveAccount(null);
     });
-    clickRef?.on("csprclick:disconnected", async () => {
+    clickRef?.on('csprclick:disconnected', async () => {
       setActiveAccount(null);
     });
   }, [clickRef?.on]);
@@ -28,12 +37,9 @@ const MainContainer = () => {
   return (
     <Container>
       <Welcome />
-      <div
-        id="getting-started"
-        className="max-w-full md:max-w-screen-md lg:max-w-screen-lg px-3 mx-auto"
-      >
+      <GettingStartedContainer id={'getting-started'}>
         {activeAccount ? <SignedInBrief /> : <LandingBrief />}
-      </div>
+      </GettingStartedContainer>
     </Container>
   );
 };

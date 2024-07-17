@@ -65,11 +65,11 @@ export interface Source {
 }
 
 export enum Type {
-  ImageWebp = "image/webp",
+  ImageWebp = 'image/webp'
 }
 
 export enum Layout {
-  Constrained = "constrained",
+  Constrained = 'constrained'
 }
 
 export interface AllProjects {
@@ -90,9 +90,9 @@ export interface AllProjectsNode {
 }
 
 export enum Status {
-  Live = "Live",
-  LiveActive = "Live - Active",
-  NotLiveInDevelopment = "Not Live - In Development",
+  Live = 'Live',
+  LiveActive = 'Live - Active',
+  NotLiveInDevelopment = 'Not Live - In Development'
 }
 
 export interface ChildrenFile {

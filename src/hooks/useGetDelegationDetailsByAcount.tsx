@@ -1,6 +1,6 @@
-import { useQuery } from "react-query";
-import { getDelegationDetailsByAccount } from "../services/httpReq";
-import { DelegationsDetailsPayload } from "../types/account";
+import { useQuery } from 'react-query';
+import { getDelegationDetailsByAccount } from '../services/httpReq';
+import { DelegationsDetailsPayload } from '../types/account';
 
 export const useGetDelegationDetailsByAcount = (id: string) =>
   useQuery<DelegationsDetailsPayload, Error>(
@@ -10,6 +10,6 @@ export const useGetDelegationDetailsByAcount = (id: string) =>
       refetchOnWindowFocus: false,
       enabled: Boolean(id),
       // cached request will stay "fresh" for 10 seconds
-      staleTime: 10000,
+      staleTime: 10000
     }
   );

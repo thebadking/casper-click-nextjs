@@ -1,7 +1,7 @@
-import { useEffect } from "react";
-import Prism from "prismjs";
-import AccountMenu from "../../../../public/account-menu.jpg";
-import Image from "next/image";
+import { useEffect } from 'react';
+import Prism from 'prismjs';
+import AccountMenu from '../../../../public/account-menu.jpg';
+import Image from 'next/image';
 
 export const CustomMenuItems = () => {
   useEffect(() => {
@@ -12,16 +12,12 @@ export const CustomMenuItems = () => {
     <>
       <section className="p-4 ">
         <p className="mb-4">
-          You can customize the account dropdown menu in our top bar with your
-          own menu items. Options to switch to another account and sign out are
-          always present at the end of the list. The rest depends on your needs.
-          We provide a couple of common menu item components you may add, and
-          one component for you to include anything you need.
+          You can customize the account dropdown menu in our top bar with your own menu items.
+          Options to switch to another account and sign out are always present at the end of the
+          list. The rest depends on your needs. We provide a couple of common menu item components
+          you may add, and one component for you to include anything you need.
         </p>
-        <p>
-          The following piece of code shows you how to customize the account
-          menu:
-        </p>
+        <p>The following piece of code shows you how to customize the account menu:</p>
       </section>
 
       <section className="p-4 ">

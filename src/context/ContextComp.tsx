@@ -1,5 +1,5 @@
-"use client";
-import React, { ReactNode, useContext, useState } from "react";
+'use client';
+import React, { ReactNode, useContext, useState } from 'react';
 
 export interface AppState {
   csprTheme: any;
@@ -7,20 +7,20 @@ export interface AppState {
 }
 
 const defaultState: AppState = {
-  csprTheme: "dark",
-  setCsprTheme: () => {},
+  csprTheme: 'dark',
+  setCsprTheme: () => {}
 };
 
 const AppContext = React.createContext<AppState>(defaultState);
 
 const ContextComp = ({ children }: { children: ReactNode }) => {
-  const [csprTheme, setCsprTheme] = useState("dark");
+  const [csprTheme, setCsprTheme] = useState('dark');
 
   return (
     <AppContext.Provider
       value={{
         csprTheme,
-        setCsprTheme,
+        setCsprTheme
       }}
     >
       {children}

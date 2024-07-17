@@ -1,4 +1,4 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client';
 
 export const ACTIVE_WALLETS_BY_DAY_QUERY = gql`
   query GetActiveWalletsByDay($date: String!) {

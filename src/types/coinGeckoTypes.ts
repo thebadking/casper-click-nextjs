@@ -58,7 +58,7 @@ export interface Tion {
   ru: string;
   ja: string;
   zh: string;
-  "zh-tw": string;
+  'zh-tw': string;
   ko: string;
   ar: string;
   th: string;
@@ -79,7 +79,7 @@ export interface Tion {
 }
 
 export interface DetailPlatforms {
-  "": Empty;
+  '': Empty;
 }
 
 export interface Empty {
@@ -113,7 +113,7 @@ export interface ReposURL {
 }
 
 export interface Platforms {
-  "": string;
+  '': string;
 }
 
 export interface PublicInterestStats {

@@ -42,9 +42,9 @@ export interface Amount {
 }
 
 export enum ClTypeEnum {
-  PublicKey = "PublicKey",
-  String = "String",
-  U512 = "U512",
+  PublicKey = 'PublicKey',
+  String = 'String',
+  U512 = 'U512'
 }
 
 export interface ID {
@@ -84,7 +84,7 @@ export interface EntryPoint {
 }
 
 export enum Status {
-  Executed = "executed",
+  Executed = 'executed'
 }
 
 export interface Page {
@@ -95,10 +95,10 @@ export interface Page {
 export const getExecutionTypeById = (id: number) => {
   switch (id) {
     case 1:
-      return "WASM deploy";
+      return 'WASM deploy';
 
     case 2:
-      return "Delegate/Undelegate";
+      return 'Delegate/Undelegate';
 
     case 3:
       break;
@@ -107,7 +107,7 @@ export const getExecutionTypeById = (id: number) => {
     case 5:
       break;
     case 6:
-      return "Transfer";
+      return 'Transfer';
 
     case 1:
       break;

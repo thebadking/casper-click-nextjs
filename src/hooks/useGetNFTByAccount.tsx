@@ -1,14 +1,8 @@
-import { useQuery } from "react-query";
-import {
-  getCasperLiveNFTByAccount,
-  getTransfersByAccount,
-} from "../services/httpReq";
-import { NFTByAccountPayload } from "../types/account";
+import { useQuery } from 'react-query';
+import { getCasperLiveNFTByAccount, getTransfersByAccount } from '../services/httpReq';
+import { NFTByAccountPayload } from '../types/account';
 
-export const useGetNFTByAccount = (
-  accountHash: string,
-  page: number | undefined
-) =>
+export const useGetNFTByAccount = (accountHash: string, page: number | undefined) =>
   useQuery<NFTByAccountPayload, Error>(
     `NFT-${accountHash}`,
     () => getCasperLiveNFTByAccount(accountHash, page),
@@ -16,6 +10,6 @@ export const useGetNFTByAccount = (
       refetchOnWindowFocus: false,
       enabled: Boolean(accountHash),
       // cached request will stay "fresh" for 10 seconds
-      staleTime: 10000,
+      staleTime: 10000
     }
   );

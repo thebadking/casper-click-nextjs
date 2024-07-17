@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import * as React from "react";
-import { useTheme } from "next-themes";
+import * as React from 'react';
+import { useTheme } from 'next-themes';
 
 export function ThemeToggle() {
   const { setTheme, theme } = useTheme();
@@ -9,7 +9,7 @@ export function ThemeToggle() {
   return (
     <button
       onClick={() => {
-        setTheme(theme === "light" ? "dark" : "light");
+        setTheme(theme === 'light' ? 'dark' : 'light');
       }}
     >
       <span className="sr-only">Toggle theme</span>

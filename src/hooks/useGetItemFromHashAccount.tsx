@@ -1,14 +1,8 @@
-import { useQuery } from "react-query";
-import {
-  getDelegationDetailsByAccount,
-  getItemFromHashAccount,
-} from "../services/httpReq";
-import { ItemFromHashAccountPayload } from "../types/account";
+import { useQuery } from 'react-query';
+import { getDelegationDetailsByAccount, getItemFromHashAccount } from '../services/httpReq';
+import { ItemFromHashAccountPayload } from '../types/account';
 
-export const useGetItemFromHashAccount = (
-  state_root_hash: string,
-  account_hash: string
-) =>
+export const useGetItemFromHashAccount = (state_root_hash: string, account_hash: string) =>
   useQuery<ItemFromHashAccountPayload, Error>(
     `itemHash-${account_hash}`,
     () => getItemFromHashAccount(state_root_hash, account_hash),
@@ -16,6 +10,6 @@ export const useGetItemFromHashAccount = (
       refetchOnWindowFocus: false,
       enabled: Boolean(state_root_hash) && Boolean(account_hash),
       // cached request will stay "fresh" for 10 seconds
-      staleTime: 10000,
+      staleTime: 10000
     }
   );

@@ -1,6 +1,6 @@
-import { useQuery } from "react-query";
-import { getTotalRewardsByAccount } from "../services/httpReq";
-import { TotalRewardAccountPayload } from "../types/account";
+import { useQuery } from 'react-query';
+import { getTotalRewardsByAccount } from '../services/httpReq';
+import { TotalRewardAccountPayload } from '../types/account';
 
 export const useGetTotalRewardsByAccount = (id: string) =>
   useQuery<TotalRewardAccountPayload, Error>(
@@ -10,6 +10,6 @@ export const useGetTotalRewardsByAccount = (id: string) =>
       refetchOnWindowFocus: false,
       enabled: Boolean(id),
       // cached request will stay "fresh" for 10 seconds
-      staleTime: 10000,
+      staleTime: 10000
     }
   );
