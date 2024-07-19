@@ -1,5 +1,6 @@
 'use client';
 import dynamic from 'next/dynamic';
+
 export default function CasperProvider({
   children
 }: Readonly<{

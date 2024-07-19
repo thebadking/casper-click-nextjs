@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ae3d9d0d-b891-4f6b-96cf-2b3de44a85ab" name="Changes" comment="formatted template">
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postcss.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/postcss.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/next.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vercel.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CSPRMain.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GettingStarted/components/BuyMeACoffee.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GettingStarted/components/BuyMeACoffee.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/CasperProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/CasperProvider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/ClientProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/ClientProvider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/theme-provider.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/theme-toggle.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/use-computed-style.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useClickOutside.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetAllValidators.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetAuctionMetrics.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetBalanceFromUref.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetBlockById.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetBlocks.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetBlocksByValidator.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetCasperLiveNFTByAccount.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetCasperSupplyInfo.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetCoinCommunityData.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetContract.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetContractPackage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetContracts.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetDelegationDetailsByAcount.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetDelegationsByAccount.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetDelegatorTotalRewards.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetDeployById.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetDeployRaw.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetDeploys.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetDeploysByAccount.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetDeploysByBlock.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetFriendlyMarketNFTByAccount.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetHistoryCasperPrice.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetItemFromHashAccount.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetLast14daysDeploysCount.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetNFTByAccount.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetProjects.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetRewardsByAccount.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetRewardsByDelegator.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetRichList.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetStatusInfos.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetTotalRewardsByAccount.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetTrandingNFTCollections.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetTransfersByAccount.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetUndelegatingTokensByAccount.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetValidator.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetValidatorTotalDelegatorsRewards.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetValidatorTotalRewards.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetValidatorsListByDelegator.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useWindowSize.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/graphqlQueries.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/httpReq.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/request.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/account.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/block.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/blocks.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/coinGeckoTypes.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/contracts.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/deploy.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/deploys.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/nft.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/projects.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/richlist.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/transfers.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/validator.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/validators.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Utils.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/apolloClient.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+</project>

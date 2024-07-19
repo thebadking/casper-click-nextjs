@@ -2,13 +2,13 @@
 import { useAppContext } from './ContextComp';
 import dynamic from 'next/dynamic';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import styled, { ThemeProvider as ThemeProviderStyled } from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 import { AppTheme } from '@/components/getCsprTheme';
+import 'prismjs';
 import { Lang, ThemeModeType } from '@make-software/csprclick-ui';
 import 'prismjs/themes/prism-okaidia.css';
 import 'prismjs/components/prism-typescript';
 import {
-  accountMenuItems,
   CURRENCIES,
   currencySettings,
   languageSettings,
@@ -25,7 +25,7 @@ const ClickProvider = dynamic(
   }
 );
 
-const ClickTopBar = dynamic(
+const ClickUI = dynamic(
   () => import('@make-software/csprclick-ui').then((mod) => mod.ClickUI),
   {
     ssr: false
@@ -81,10 +81,6 @@ export default function ClientProvider({ children }: { children: React.ReactNode
   const [lang, setLang] = useState<Lang>(Lang.EN);
   const [currency, setCurrency] = useState(CURRENCIES[0]);
   const [network, setNetwork] = useState<string>(NETWORKS[1]);
-
-  const { csprTheme, setCsprTheme } = useAppContext();
-  const { setTheme } = useTheme();
-
   const [themeMode, setThemeMode] = useState<ThemeModeType>(ThemeModeType.light);
 
   const handleThemeSwitch = () => {
@@ -93,10 +89,10 @@ export default function ClientProvider({ children }: { children: React.ReactNode
 
   return (
     <ClickProvider options={clickOptions}>
-      <ThemeProviderStyled theme={AppTheme[themeMode]}>
+      <ThemeProvider theme={AppTheme[themeMode]}>
         <TopBarSection>
           <TopBarContainer>
-            <ClickTopBar
+            <ClickUI
               topBarSettings={{
                 onThemeSwitch: handleThemeSwitch,
                 accountMenuItems: accountMenuItems,
@@ -108,9 +104,8 @@ export default function ClientProvider({ children }: { children: React.ReactNode
             />
           </TopBarContainer>
         </TopBarSection>
-
         <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
-      </ThemeProviderStyled>
+      </ThemeProvider>
     </ClickProvider>
   );
 }

@@ -113,32 +113,32 @@ export const BuyMeACoffee = () => {
       <Section withBackground>
         <table>
           <tbody>
-            <tr>
-              <StyledTD>Send:</StyledTD>
-              <td>50 CSPR</td>
-            </tr>
-            <tr>
-              <StyledTD>From:</StyledTD>
-              <td>
-                <i>your account</i>
-              </td>
-            </tr>
-            <tr>
-              <StyledTD>To:</StyledTD>
-              <td>
-                <AccountRow>
-                  <AccountIdenticon hex={recipientPk} size="sm"></AccountIdenticon>
-                  <SpanTruncated>{recipientPk}</SpanTruncated>
-                </AccountRow>
-              </td>
-            </tr>
-            <tr>
-              <td colSpan={2}>
-                {activeAccount?.public_key && (
-                  <button onClick={() => handleSignTransaction()}>Sign transaction</button>
-                )}
-              </td>
-            </tr>
+          <tr>
+            <StyledTD>Send:</StyledTD>
+            <td>50 CSPR</td>
+          </tr>
+          <tr>
+            <StyledTD>From:</StyledTD>
+            <td>
+              <i>your account</i>
+            </td>
+          </tr>
+          <tr>
+            <StyledTD>To:</StyledTD>
+            <td>
+              <AccountRow>
+                <AccountIdenticon hex={recipientPk} size="sm"></AccountIdenticon>
+                <SpanTruncated>{recipientPk}</SpanTruncated>
+              </AccountRow>
+            </td>
+          </tr>
+          <tr>
+            <td colSpan={2}>
+              {activeAccount?.public_key && (
+                <button onClick={() => handleSignTransaction()}>Sign transaction</button>
+              )}
+            </td>
+          </tr>
           </tbody>
         </table>
 
