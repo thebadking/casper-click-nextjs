@@ -10,16 +10,16 @@ const UserAccount = () => {
   return (
     <table>
       <tbody>
-        <tr>
-          <StyledTD>Public key:</StyledTD>
-          <td>
-            <SpanTruncated>{activeAccount?.public_key}</SpanTruncated>
-          </td>
-        </tr>
-        <tr>
-          <StyledTD>Provider:</StyledTD>
-          <td>{activeAccount?.provider}</td>
-        </tr>
+      <tr>
+        <StyledTD>Public key:</StyledTD>
+        <td>
+          <SpanTruncated>{activeAccount?.public_key}</SpanTruncated>
+        </td>
+      </tr>
+      <tr>
+        <StyledTD>Provider:</StyledTD>
+        <td>{activeAccount?.provider}</td>
+      </tr>
       </tbody>
     </table>
   );

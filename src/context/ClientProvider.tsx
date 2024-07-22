@@ -1,5 +1,4 @@
 'use client';
-import { useAppContext } from './ContextComp';
 import dynamic from 'next/dynamic';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import styled, { ThemeProvider } from 'styled-components';
@@ -16,7 +15,6 @@ import {
   networkSettings
 } from '@/components/settings';
 import { useState } from 'react';
-import { useTheme } from 'next-themes';
 
 const ClickProvider = dynamic(
   () => import('@make-software/csprclick-ui').then((mod) => mod.ClickProvider),
@@ -25,12 +23,9 @@ const ClickProvider = dynamic(
   }
 );
 
-const ClickUI = dynamic(
-  () => import('@make-software/csprclick-ui').then((mod) => mod.ClickUI),
-  {
-    ssr: false
-  }
-);
+const ClickUI = dynamic(() => import('@make-software/csprclick-ui').then((mod) => mod.ClickUI), {
+  ssr: false
+});
 
 const BuyCSPRMenuItem = dynamic(
   () => import('@make-software/csprclick-ui').then((mod) => mod.BuyCSPRMenuItem),
@@ -44,7 +39,7 @@ const queryClient = new QueryClient({
 });
 
 const clickOptions = {
-  appName: 'Scansper',
+  appName: 'CSPR.click',
   contentMode: 'iframe',
   providers: [
     'casper-wallet',
@@ -54,7 +49,7 @@ const clickOptions = {
     'torus-wallet',
     'casper-signer'
   ],
-  appId: 'scansper'
+  appId: 'csprclick-template'
 };
 
 const TopBarSection = styled.section(({ theme }) => ({
@@ -77,7 +72,6 @@ const TopBarContainer = styled.div(({ theme }) =>
 
 export default function ClientProvider({ children }: { children: React.ReactNode }) {
   const accountMenuItems = [<BuyCSPRMenuItem key={'buy-cspr'} />];
-  const topBarSettings = { accountMenuItems };
   const [lang, setLang] = useState<Lang>(Lang.EN);
   const [currency, setCurrency] = useState(CURRENCIES[0]);
   const [network, setNetwork] = useState<string>(NETWORKS[1]);

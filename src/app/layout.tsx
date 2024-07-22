@@ -8,12 +8,12 @@ const inter = Inter({ subsets: ['latin'] });
 const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return (
     <html lang="en">
-    <body className={inter.className}>
-    <div id={'root'} />
-    <ContextComp>
-      <CasperProvider>{children}</CasperProvider>
-    </ContextComp>
-    </body>
+      <body className={inter.className}>
+        <div id={'root'} />
+        <ContextComp>
+          <CasperProvider>{children}</CasperProvider>
+        </ContextComp>
+      </body>
     </html>
   );
 };

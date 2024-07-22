@@ -1,8 +1,8 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { useClickRef } from '@make-software/csprclick-ui';
-import { LandingBrief, SignedInBrief } from '@/components/GettingStarted';
-import { Welcome } from '@/components/GettingStarted/components';
+import { LandingBrief, SignedInBrief } from '../components/gettingStarted';
+import { Welcome } from '@/components/gettingStarted/components';
 import styled from 'styled-components';
 import Container from '@/components/container';
 

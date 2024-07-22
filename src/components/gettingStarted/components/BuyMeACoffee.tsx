@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Section } from './Section';
 import { AccountIdenticon, useClickRef } from '@make-software/csprclick-ui';
 import { SendResult } from '@make-software/csprclick-core-client';
-import makeTransferDeploy from './transfer-deploy';
+import makeTransferDeploy from './TransferDeploy';
 import Prism from 'prismjs';
 
 export const StyledTD = styled.td(({ theme }) =>
@@ -113,32 +113,32 @@ export const BuyMeACoffee = () => {
       <Section withBackground>
         <table>
           <tbody>
-          <tr>
-            <StyledTD>Send:</StyledTD>
-            <td>50 CSPR</td>
-          </tr>
-          <tr>
-            <StyledTD>From:</StyledTD>
-            <td>
-              <i>your account</i>
-            </td>
-          </tr>
-          <tr>
-            <StyledTD>To:</StyledTD>
-            <td>
-              <AccountRow>
-                <AccountIdenticon hex={recipientPk} size="sm"></AccountIdenticon>
-                <SpanTruncated>{recipientPk}</SpanTruncated>
-              </AccountRow>
-            </td>
-          </tr>
-          <tr>
-            <td colSpan={2}>
-              {activeAccount?.public_key && (
-                <button onClick={() => handleSignTransaction()}>Sign transaction</button>
-              )}
-            </td>
-          </tr>
+            <tr>
+              <StyledTD>Send:</StyledTD>
+              <td>50 CSPR</td>
+            </tr>
+            <tr>
+              <StyledTD>From:</StyledTD>
+              <td>
+                <i>your account</i>
+              </td>
+            </tr>
+            <tr>
+              <StyledTD>To:</StyledTD>
+              <td>
+                <AccountRow>
+                  <AccountIdenticon hex={recipientPk} size="sm"></AccountIdenticon>
+                  <SpanTruncated>{recipientPk}</SpanTruncated>
+                </AccountRow>
+              </td>
+            </tr>
+            <tr>
+              <td colSpan={2}>
+                {activeAccount?.public_key && (
+                  <button onClick={() => handleSignTransaction()}>Sign transaction</button>
+                )}
+              </td>
+            </tr>
           </tbody>
         </table>
 
