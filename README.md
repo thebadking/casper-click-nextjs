@@ -40,7 +40,6 @@ For detailed information about integrating CSPR.Click with your Next.js app, vis
 
 Thanks to [@Charlie85270](https://github.com/Charlie85270) for this contribution!
 
-
 ## Deployment
 
 Deploy your Next.js project using platforms like Vercel, Netlify, or any other hosting provider. Follow their specific instructions for deployment.

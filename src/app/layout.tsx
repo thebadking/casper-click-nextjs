@@ -1,25 +1,21 @@
-import { Inter } from "next/font/google";
-import "./globals.css";
-import ContextComp from "@/context/ContextComp";
-import CasperProvider from "@/context/CasperProvider";
-import { ThemeProvider } from "@/context/theme-provider";
-const inter = Inter({ subsets: ["latin"] });
+import { Inter } from 'next/font/google';
+import './globals.css';
+import ContextComp from '@/context/ContextComp';
+import CasperProvider from '@/context/CasperProvider';
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const inter = Inter({ subsets: ['latin'] });
+
+const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div id={"root"} />
+        <div id={'root'} />
         <ContextComp>
-          <ThemeProvider>
-            <CasperProvider>{children}</CasperProvider>
-          </ThemeProvider>
+          <CasperProvider>{children}</CasperProvider>
         </ContextComp>
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

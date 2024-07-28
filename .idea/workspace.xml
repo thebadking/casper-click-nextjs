@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ae3d9d0d-b891-4f6b-96cf-2b3de44a85ab" name="Changes" comment="formatted template">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GettingStarted/components/Account.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gettingStarted/components/Account.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GettingStarted/components/BuyMeACoffee.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gettingStarted/components/BuyMeACoffee.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GettingStarted/components/CustomMenuItems.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gettingStarted/components/CustomMenuItems.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GettingStarted/components/Section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gettingStarted/components/Section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GettingStarted/components/UseClickRefHook.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gettingStarted/components/UseClickRefHook.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GettingStarted/components/Welcome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gettingStarted/components/Welcome.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GettingStarted/components/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gettingStarted/components/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GettingStarted/components/transfer-deploy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gettingStarted/components/TransferDeploy.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GettingStarted/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gettingStarted/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/ClientProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/ClientProvider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/ContextComp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/ContextComp.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2jSyzuASOnpP6CieyJ72MwIkAOe" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/okushnir/Desktop/dev/casper-click-nextjs/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-2e7d6887c066-JavaScript-WS-241.15989.47" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ae3d9d0d-b891-4f6b-96cf-2b3de44a85ab" name="Changes" comment="formatted template" />
+      <created>1721395040176</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1721395040176</updated>
+      <workItem from="1721395041272" duration="288000" />
+      <workItem from="1721647965316" duration="2330000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

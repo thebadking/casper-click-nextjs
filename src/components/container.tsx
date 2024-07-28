@@ -1,29 +1,74 @@
-import React from "react";
-import cx from "classnames";
+import styled from 'styled-components';
 
-export const Container = ({
-  children,
-  className,
-  ...props
-}: {
-  children: React.ReactNode;
-  className?: string;
-  h2?: boolean;
-  h3?: boolean;
-  h5?: boolean;
-} & React.HTMLProps<HTMLDivElement>) => (
-  <div
-    className={cx(
-      "flex flex-col w-full min-h-screen mx-auto bg-background text-content-secondary",
-      {
-        "font-bold text-content-primary text-2xl mt-8": props.h2,
-        "font-medium text-content-primary text-lg mt-8": props.h3,
-        "font-medium text-content-primary text-sm text-center mt-4": props.h5,
+const Container = styled.div(({ theme }) =>
+  theme.withMedia({
+    display: 'flex',
+    flexDirection: 'column',
+    width: '100%',
+    minHeight: '100vh',
+    margin: '0 auto',
+    backgroundColor: theme.backgroundColor,
+    color: theme.contentSecondary,
+    h2: { fontSize: 'calc(12px + 2vmin)', fontWeight: '700', color: theme.contentPrimary },
+    h3: {
+      fontSize: 'calc(11px + 2vmin)',
+      fontWeight: '500',
+      color: theme.contentPrimary,
+      margin: '100px 0 30px 0'
+    },
+    h5: {
+      fontSize: 'calc(10px + 2vmin)',
+      fontWeight: '500',
+      color: theme.contentPrimary,
+      textAlign: 'center'
+    },
+    a: {
+      color: theme.linkColor,
+      cursor: 'pointer',
+      textDecoration: 'none'
+    },
+    b: {
+      cursor: 'pointer'
+    },
+    span: {
+      fontSize: '16px',
+      fontWeight: '400',
+      lineHeight: '24px'
+    },
+    pre: {
+      background: theme.backgroundPrimary,
+      code: {
+        color: theme.codeColor
       }
-    )}
-    {...props}
-  >
-    {children}
-  </div>
+    },
+    button: {
+      background: theme.contentPrimary,
+      color: theme.fillSecondary,
+      height: '38px',
+      padding: '8px 16px',
+      marginTop: '20px',
+      fontSize: '14px',
+      fontWeight: '600',
+      lineHeight: '20px'
+    },
+    ol: {
+      color: theme.fillPrimaryBlue,
+      li: {
+        marginTop: '5px',
+        a: {
+          color: theme.fillPrimaryBlue,
+          '&:hover': {
+            color: '#294ACC'
+          }
+        }
+      }
+    },
+    ul: {
+      li: {
+        marginTop: '5px'
+      }
+    }
+  })
 );
+
 export default Container;

@@ -1,9 +1,9 @@
 import {
   AccountMenuItem,
   CopyHashMenuItem,
-  ViewAccountOnExplorerMenuItem,
-} from "@make-software/csprclick-ui";
-import CSPRClickIcon from "@/logo.svg";
+  ViewAccountOnExplorerMenuItem
+} from '@make-software/csprclick-ui';
+import CSPRClickIcon from '@/logo.svg';
 
 export const accountMenuItems = [
   <ViewAccountOnExplorerMenuItem key={0} />,
@@ -11,10 +11,10 @@ export const accountMenuItems = [
   <AccountMenuItem
     key={2}
     onClick={() => {
-      window.open("https://docs.cspr.click", "_blank");
+      window.open('https://docs.cspr.click', '_blank');
     }}
     icon={CSPRClickIcon}
-    label={"CSPR.click docs"}
-    badge={{ title: "new", variation: "green" }}
-  />,
+    label={'CSPR.click docs'}
+    badge={{ title: 'new', variation: 'green' }}
+  />
 ];
