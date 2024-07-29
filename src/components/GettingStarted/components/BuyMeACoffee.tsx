@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { Section } from './Section';
 import { AccountIdenticon, useClickRef } from '@make-software/csprclick-ui';
 import { SendResult } from '@make-software/csprclick-core-client';
-import makeTransferDeploy from './TransferDeploy';
 import Prism from 'prismjs';
+import makeTransferDeploy from './TransferDeploy';
 
 export const StyledTD = styled.td(({ theme }) =>
   theme.withMedia({
